@@ -10,8 +10,8 @@
     --fantasy: 'MedievalSharp', cursive;
     --font: var(--regular);
     --sharp: 0;
-    --soft: 10px;
-    --round: 100px;
+    --soft: 25px;
+    --round: 50%;
     
     --image: var(--soft);
     
