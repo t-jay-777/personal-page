@@ -11,6 +11,17 @@ favouriteMode("light")
 // sharp, soft, round
 favouriteEdgeStyle("soft")
 
+//setting my age to page
+setFullYears();
+
+//date
+function setFullYears() {
+    const today = new Date();
+    const birthday = new Date(1989, 12, 25);
+    const age = today.getFullYear() - birthday.getFullYear();
+    document.getElementById("age").innerHTML = `${age} `;
+}
+
 
 function setProp(prop, value) {
     document.documentElement.style.setProperty(prop, value)
@@ -22,7 +33,7 @@ function favouriteEdgeStyle(style) {
 
 function favouriteMovieGenre(font) {
     if (font) {
-        setProp("--font", "var(--" + font + ")");    
+        setProp("--font", "var(--" + font + ")");
     }
 }
 
@@ -52,7 +63,7 @@ function favouriteFruit(theme) {
     } else if (theme === "forrest") {
         setProp('--light', "#91B247")
         setProp('--dark', "#597C2B")
-    }  else if (theme === "shiny") {
+    } else if (theme === "shiny") {
         setProp('--light', "#2e9afe")
         setProp('--dark', "#02197c")
     } else if (theme === "banana") {
@@ -73,10 +84,10 @@ function favouriteFruit(theme) {
     } else if (theme === "blueberry") {
         setProp('--light', "#41a8f9")
         setProp('--dark', "#064490")
-    } else  {
+    } else {
         setProp('--light', "#f5f5f5")
         setProp('--dark', "#222222")
-    } 
+    }
 }
 
 
