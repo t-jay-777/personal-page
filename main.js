@@ -8,11 +8,16 @@ favouriteFruit("avocado")
 // light, dark
 favouriteMode("light")
 
+isClicked();
+
 // sharp, soft, round
-favouriteEdgeStyle("soft")
+//favouriteEdgeStyle("round")
 
 //setting my age to page
 setFullYears();
+
+
+
 
 //date
 function setFullYears() {
@@ -21,6 +26,41 @@ function setFullYears() {
     const age = today.getFullYear() - birthday.getFullYear();
     document.getElementById("age").innerHTML = `${age} `;
 }
+
+function isClicked() {
+    const d = document.getElementsByClassName('avatar-btn');
+    //let n = "";
+    for (let i = 0; i < d.length; i+=1) {
+        d[i].onclick = function() {
+            if (i === 0) {
+                favouriteEdgeStyle("round");
+            }
+            if (i === 1) {
+                favouriteEdgeStyle("soft");
+            }
+            if (i === 2) {
+                favouriteEdgeStyle("sharp");
+            }
+        }
+    }
+    
+}
+
+// function setfavouriteEdgeStyle() {
+//     const d = document.getElementsByClassName('avatar-btn');
+//     const n = 0;
+//     for (let i = 0; i < d.length - 1; i+=1) {
+//         switch (d[i].onclick) {
+//             case 0:
+//                 return 'round'
+//             case 1:
+//                 return 'soft';
+//             case 2:
+//                 return 'round'
+//         };
+        
+//     }
+// }
 
 
 function setProp(prop, value) {
