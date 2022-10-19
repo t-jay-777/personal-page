@@ -1,14 +1,17 @@
 
 // space, scary, military, romantic, cowboy, fantasy, superhero
-favouriteMovieGenre("regular")
+//favouriteMovieGenre("space")
+setFavouriteMovieGenre();
 
+setFavouriteFruit();
 // watermelon, tomato, banana, orange, avocado, blueberry
-favouriteFruit("avocado")
+//favouriteFruit("pastel")
 
+//setMode();
 // light, dark
-favouriteMode("light")
+favouriteMode("dark")
 
-isClicked();
+setFavouriteEdgeStyle();
 
 // sharp, soft, round
 //favouriteEdgeStyle("round")
@@ -27,7 +30,7 @@ function setFullYears() {
     document.getElementById("age").innerHTML = `${age} `;
 }
 
-function isClicked() {
+function setFavouriteEdgeStyle() {
     const d = document.getElementsByClassName('avatar-btn');
     //let n = "";
     for (let i = 0; i < d.length; i+=1) {
@@ -43,7 +46,93 @@ function isClicked() {
             }
         }
     }
-    
+}
+
+function setFavouriteMovieGenre() {
+    const d = document.getElementsByClassName('movie-btn');
+    for (let i = 0; i < d.length; i+=1) {
+        d[i].onclick = function() {
+            if (i === 0) {
+                favouriteMovieGenre("space");
+            }
+            if (i === 1) {
+                favouriteMovieGenre("scary");
+            }
+            if (i === 2) {
+                favouriteMovieGenre("military");
+            }
+            if (i === 3) {
+                favouriteMovieGenre("romantic");
+            }
+            if (i === 4) {
+                favouriteMovieGenre("cowboy");
+            }
+            if (i === 5) {
+                favouriteMovieGenre("fantasy");
+            }
+            if (i === 6) {
+                favouriteMovieGenre("superhero");
+            }
+        }
+    }
+}
+
+function setFavouriteFruit() {
+    const d = document.getElementsByClassName('fruit-btn');
+    for (let i = 0; i < d.length; i+=1) {
+        d[i].onclick = function() {
+            if (i === 0) {
+                favouriteFruit("pastel");
+            }
+            if (i === 1) {
+                favouriteFruit("muted");
+            }
+            if (i === 2) {
+                favouriteFruit("love");
+            }
+            if (i === 3) {
+                favouriteFruit("sky");
+            }
+            if (i === 4) {
+                favouriteFruit("forrest");
+            }
+            if (i === 5) {
+                favouriteFruit("shiny");
+            }
+            if (i === 6) {
+                favouriteFruit("banana");
+            }
+            if (i === 7) {
+                favouriteFruit("watermelon");
+            }
+            if (i === 8) {
+                favouriteFruit("tomato");
+            }
+            if (i === 9) {
+                favouriteFruit("avocado");
+            }
+            if (i === 10) {
+                favouriteFruit("orange");
+            }
+            if (i === 11) {
+                favouriteFruit("blueberry");
+            }
+        }
+    }
+}
+
+function setMode() {
+    const d = document.getElementsByClassName('mode-btn');
+    for (let i = 0; i < d.length; i+=1) {
+        d[i].onclick = function() {
+            if (i === 0) {
+                favouriteMode("light");
+            }
+            if (i === 1) {
+                favouriteMode("dark");
+            }
+        }
+    }
 }
 
 // function setfavouriteEdgeStyle() {
